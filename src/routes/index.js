@@ -12,15 +12,16 @@ import ViewAdd from '../components/ViewAdd'
 
 export default (
   <div>
-    PLOP
-    <Route exact path="/" component={ Start } />
-    <Route path="/login" component={ Login } />
-    <Route path="/register" component={ Register } />
+    <Switch>
+      <Route exact path="/" component={ Start } />
+      <Route path="/login" component={ Login } />
+      <Route path="/register" component={ Register } />
 
-    {/*<Route path="/view" component={ Header } />
-    <Route path="/view" component={ View } />
+      {/*<Route path="/view" component={ Header } />
+      <Route path="/view" component={ View } />
 
-    <Route path="/view/add" component={ Header } />
-    <Route path="/view/add" component={ ViewAdd } />*/}
+      <Route path="/view/add" component={ Header } />
+      <Route path="/view/add" component={ ViewAdd } />*/}
+    </Switch>
   </div>
 );

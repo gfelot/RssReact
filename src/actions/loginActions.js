@@ -8,7 +8,7 @@ export const LOGIN_USER_FAIL = 'LOGIN_USER_FAIL'
 
 export function loginUser(formData) {
   const request = axios.post(
-    `${RootURL}/login`,
+    `${RootURL}/api/subscribe`,
     formData
   )
 
