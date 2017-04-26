@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import logoUrl from './kodama2.jpg';
+import s from './fluxitemslist.css';
 
 class FluxItemsList extends Component {
   render() {

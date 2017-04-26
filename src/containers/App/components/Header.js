@@ -1,31 +1,6 @@
 import React, { Component } from 'react';
-import { Navbar, Nav, NavItem, Modal, Button } from 'react-bootstrap'
-import FluxList from './FluxList';
-import s from './components.css';
-
-const FluxModal = React.createClass({
-  getInitialState() {
-    return { showModal: false };
-  },
-  close() {
-    this.setState({ showModal: false });
-  },
-  open() {
-    this.setState({ showModal: true });
-  },
-  render() {
-    return (
-        <NavItem eventKey={1} onClick={this.open}>Add
-          <Modal show={this.state.showModal} onHide={this.close} bsSize="lg">
-            <Modal.Header closeButton />
-            <Modal.Body>
-              <FluxList/>
-            </Modal.Body>
-          </Modal>
-        </NavItem>
-    );
-  }
-});
+import { Navbar, Nav, NavItem } from 'react-bootstrap'
+import s from './header.css';
 
 class Header extends Component {
   render() {
@@ -37,9 +12,9 @@ class Header extends Component {
           </Navbar.Brand>
         </Navbar.Header>
         <Nav pullRight>
-        <FluxModal />
-        <NavItem eventKey={2} href="#">Logout</NavItem>
-      </Nav>
+          <NavItem eventKey={1} href="/view/add">Add</NavItem>
+          <NavItem eventKey={2} href="#">Logout</NavItem>
+        </Nav>
       </Navbar>
     )
   }

@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
 import Header from '../App/components/Header';
-import FluxItemsList from './components/FluxItemsList';
+import FluxAddList from './components/FluxAddList';
 
-class View extends Component {
+class Add extends Component {
   render() {
     return (
       <div>
         <Header />
-        <FluxItemsList />
+        <FluxAddList />
       </div>
     );
   }
 }
 
-export default View;
+export default Add;
