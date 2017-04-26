@@ -1,0 +1,65 @@
+.navbar-default {
+  background-color: #2a2a3a;
+  border-radius: 0;
+  margin:0;
+}
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+  color: #FFF;
+}
+.modal-content {
+  height: calc(100vh - 62px);
+}
+.modal-body {
+    padding: 20px 40px;
+}
+.modal-content input {
+  width: 75%;
+  padding-left: 10px;
+  height: 40px;
+}
+.modal-content .modal-body button {
+  width: 15%;
+  float: right;
+  height: 40px;
+}
+.theList {
+  margin: 15px 0;
+  padding: 0;
+  list-style: none;
+}
+.theList li {
+  border-bottom: 1px solid #e2e2e2;
+  padding: 5px 0;
+}
+.theList li span {
+  font-size: 19px;
+  width: 75%;
+  display: inline-block;
+}
+.theList li a {
+  background-color: #ee6e73;
+  color: white;
+  padding: 0px 4px;
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 3px;
+  text-decoration: none;
+  cursor: pointer;
+  float: right;
+}
+.fluxitemslist {
+  max-width: 991px;
+  margin: auto;
+}
+.fluxitemslist ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.fluxitemslist ul li {
+  padding: 15px 0 0 0;
+}
+.info-title {
+  vertical-align: top;
+  padding: 0 20px;
+}
