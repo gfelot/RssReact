@@ -6,7 +6,7 @@ class View extends Component {
   render() {
     return (
       <div>
-        <Header />
+        // <Header />
         <FluxItemsList />
       </div>
     );

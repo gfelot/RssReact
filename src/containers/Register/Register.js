@@ -7,7 +7,7 @@ class Register extends Component {
   login(e) {
     console.log(this.email.value);
     console.log(this.password.value);
-    this.props.history.push('/')
+    this.props.history.push('/View')
   }
 
   render() {

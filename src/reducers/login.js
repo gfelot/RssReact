@@ -24,6 +24,7 @@ export default function (state = INITIAL_STATE, action) {
 
     case AUTH_LOGIN_SUCCESS:
       let data = action.payload
+      console.log("Login ok", data);
       return {
         ...state,
         isAuthenticated: data.status === '200' ? true : false,

@@ -13,7 +13,7 @@ import View from '../View/View'
 
 const App = (props) => (
     <div>
-        { props.loggedIn && <Header /> }
+        { props.isAuthenticated && <Header /> }
         <Route exact path="/" component={ Start } />
         <Route path="/login" component={ Login } />
         <Route path="/register" component={ Register } />
