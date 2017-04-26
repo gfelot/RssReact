@@ -17,7 +17,6 @@ const App = (props) => (
         <Route exact path="/" component={ Start } />
         <Route path="/login" component={ Login } />
         <Route path="/register" component={ Register } />
-
         <PrivateRoute path="/view" isAuthenticated={ props.isAuthenticated } component={ View } />
     </div>
 );
