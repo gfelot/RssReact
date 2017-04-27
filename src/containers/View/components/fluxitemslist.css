@@ -1,0 +1,16 @@
+.fluxitemslist {
+  max-width: 991px;
+  margin: auto;
+}
+.fluxitemslist ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.fluxitemslist ul li {
+  padding: 15px 0 0 0;
+}
+.info-title {
+  vertical-align: top;
+  padding: 0 20px;
+}
