@@ -1,6 +1,7 @@
 import React from 'react';
+import s from './fluxaddlist.css';
 
-var FluxItems = React.createClass({
+var FluxAddItems = React.createClass({
   render: function() {
     var fluxEntries = this.props.entries;
     var remove = this.props.remove;
@@ -22,7 +23,7 @@ var FluxItems = React.createClass({
   }
 });
 
-var FluxList = React.createClass({
+var FluxAddList = React.createClass({
   getInitialState: function() {
     return {
       items: []
@@ -66,10 +67,10 @@ var FluxList = React.createClass({
             <button type="submit">Ajouter</button>
           </form>
         </div>
-        <FluxItems entries={this.state.items} remove={this.removeItem}/>
+        <FluxAddItems entries={this.state.items} remove={this.removeItem}/>
       </div>
     );
   }
 });
 
-export default FluxList
+export default FluxAddList

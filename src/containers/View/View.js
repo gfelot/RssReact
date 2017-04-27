@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Header from '../App/components/Header';
-import FluxItemsList from '../App/components/FluxItemsList';
+import FluxItemsList from './components/FluxItemsList';
 
 class View extends Component {
   render() {

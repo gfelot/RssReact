@@ -14,13 +14,16 @@ class Login extends Component {
     let email = this.email.value || '',
       password = this.password.value || '';
 
-    this.props.loginUser(email, password);
+    this.props.loginUser(email, password)
+    console.log("Yipyyoyippiyé");
     if (this.props.fetched){
+      console.log("Yipyyoyippiyé2");
       this.props.history.push('/View')
     } else if (this.props.error) {
       console.log(this.props.error);
-    }
+    } else {
 
+    }
 
   }
 
