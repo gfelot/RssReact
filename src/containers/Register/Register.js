@@ -5,8 +5,9 @@ import Logo from '../../img/LogoURSS.png'
 
 class Register extends Component {
   login(e) {
-    console.log(this.email.value);
-    console.log(this.password.value);
+    e.preventDefault();
+    e.stopPropagation();
+    
     this.props.history.push('/View')
   }
 

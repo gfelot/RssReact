@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { Component } from 'react';
 import s from './fluxaddlist.css';
 
-var FluxAddItems = React.createClass({
-  render: function() {
+
+class FluxAddItems extends Component {
+  render() {
     var fluxEntries = this.props.entries;
     var remove = this.props.remove;
 
@@ -21,15 +22,15 @@ var FluxAddItems = React.createClass({
       </ul>
     );
   }
-});
+};
 
-var FluxAddList = React.createClass({
-  getInitialState: function() {
+class FluxAddList extends Component{
+  getInitialState() {
     return {
       items: []
     };
-  },
-  addItem: function(e) {
+  }
+  addItem = (e) => {
     var itemArray = this.state.items;
 
     itemArray.push(
@@ -46,8 +47,8 @@ var FluxAddList = React.createClass({
     this._inputElement.value = "";
 
     e.preventDefault();
-  },
-  removeItem: function(item, e){
+  }
+  removeItem = (item, e) => {
     e.preventDefault();
 
     var items = this.state.items.filter(function(itm){
@@ -55,7 +56,8 @@ var FluxAddList = React.createClass({
     });
 
     this.setState({ items: items });
-  },
+  }
+  
   render() {
     return (
       <div className="todoListMain">
@@ -71,6 +73,6 @@ var FluxAddList = React.createClass({
       </div>
     );
   }
-});
+};
 
 export default FluxAddList

@@ -11,7 +11,7 @@ class Login extends Component {
   login = (e) => {
     e.preventDefault();
     e.stopPropagation();
-    
+
     let email = this.email.value || '',
       password = this.password.value || '';
 
@@ -22,8 +22,6 @@ class Login extends Component {
       this.props.history.push('/View')
     } else if (this.props.error) {
       console.log(this.props.error);
-    } else {
-
     }
 
   }
