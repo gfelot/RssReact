@@ -21,7 +21,6 @@ const App = (props) => (
         <Route exact path="/view" component={ View } />
         <Route path="/view/add" component={ ViewAdd } />
 
-{/* <Route path="add" component={ Add } /> */}
         {/* <PrivateRoute path="/view" isAuthenticated={ props.isAuthenticated } component={ View } /> */}
     </div>
 );

@@ -6,7 +6,6 @@ const INITIAL_STATE = {
   error: null
  };
 
-
  export const AUTH_LOGIN = 'AUTH_LOGIN',
    AUTH_LOGIN_SUCCESS = 'AUTH_LOGIN_SUCCESS',
    AUTH_LOGIN_FAIL = 'AUTH_LOGIN_FAIL';
