@@ -34,18 +34,16 @@ export function loginUserFail(error) {
 // Action Creators
 // This is the only action creator that needs to be exported.  Usually you would
 // have several for doing CRUD operations and such.
-export const loginUserAction = (username, password) => {
+export const loginUserAction = (email, password) => {
 
   // The "dispatch" parameter is automatically injected by redux-thunk.  Redux-thunk lets
   // you process async operations and dispatch the returned data when it's ready.
   return (dispatch) => {
     dispatch(loginUser());
 
-    // This is how you would dispatch an async API call.
-    axios.post(`${RootURL}/login`, { email: username, password: password })
+    axios.post(`${baseURL}/login`, { email: email, password: password })
       .then(res => dispatch( loginUserSuccess(res.data) ))
       .catch(e => dispatch( loginUserFail(e) ))
-    }
-
   }
+
 }
