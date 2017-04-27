@@ -3,12 +3,14 @@ import { Redirect } from 'react-router-dom';
 import { Grid, Row, Col, FormGroup, FormControl, Button } from 'react-bootstrap'
 import { connect } from 'react-redux';
 
-import { loginUserAction } from '../../reducers/login';
+import { loginUserAction } from '../../actions/loginActions';
 
 import Logo from '../../img/LogoURSS.png'
 
 class Login extends Component {
   login = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
     let email = this.email.value || '',
       password = this.password.value || '';
 

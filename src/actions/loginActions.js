@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const baseURL = 'https://rssfeedepitech.herokuapp.com/api/'
+const baseURL = 'https://rssfeedepitech.herokuapp.com/api'
 
 // Action Constants
 export const AUTH_LOGIN = 'AUTH_LOGIN',
