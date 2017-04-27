@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, IndexRoute } from 'react-router-dom';
+import { Route, IndexRoute, Switch } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 // Import Root Components and Setup Routes

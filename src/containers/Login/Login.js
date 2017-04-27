@@ -9,6 +9,8 @@ import Logo from '../../img/LogoURSS.png'
 
 class Login extends Component {
   login = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
     let email = this.email.value || '',
       password = this.password.value || '';
 
