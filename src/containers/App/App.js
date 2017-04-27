@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, IndexRoute } from 'react-router-dom';
+import { Route, IndexRoute, Switch, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 // Import Root Components and Setup Routes
@@ -12,19 +12,25 @@ import Register from '../Register/Register'
 import View from '../View/View'
 import ViewAdd from '../ViewAdd/ViewAdd'
 
-const App = (props) => (
-    <div>
-        { props.isAuthenticated && <Header /> }
-        <Route exact path="/" component={ Start } />
-        <Route path="/login" component={ Login } />
-        <Route path="/register" component={ Register } />
-        <Route exact path="/view" component={ View } />
-        <Route path="/view/add" component={ ViewAdd } />
+class App extends React.Component {
+    render() {
+        return (
+            <div >
+                {this.props.isAuthenticated && <Header />}
+                <Switch>
+                    <Route exact path="/" component={ Start } />
+                    <Route path="/login" component={ Login } />
+                    <Route path="/register" component={ Register } />
+                    <Route exact path="/view" component={ View } />
+                    <Route path="/view/add" component={ ViewAdd } />
 
-{/* <Route path="add" component={ Add } /> */}
-        {/* <PrivateRoute path="/view" isAuthenticated={ props.isAuthenticated } component={ View } /> */}
-    </div>
-);
+                    {/* <Route path="add" component={ Add } /> */}
+                    {/* <PrivateRoute path="/view" isAuthenticated={ props.isAuthenticated } component={ View } /> */}
+                </Switch>
+            </div >
+        );
+    }
+}
 
 const mapStateToProps = (state) => {
     return {
@@ -32,4 +38,4 @@ const mapStateToProps = (state) => {
     }
 }
 
-export default connect(mapStateToProps, null)(App);
+export default withRouter(connect(mapStateToProps, null)(App));
